@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ahorcado</h1>
+    <p>Elejí las letras con cuidado</p>
+</div>
+
+<div>
+<p id="misterio"></p>
+
+<p id="palabra" class="hidden"> @ViewBag.palabra </p>
+
+</div>
+
+<div>
+<input class="texto" id="entrada" type="text">
+<button onclick="ArriesgarLetra()">Enviar</button>
+</div>
+
+<div>
+<p> Intentos restantes: <p>
+<P id="intentos">10<p>
+</div>
+
+<div>
+    <h1 id="victoria"></h1>
+</div>
