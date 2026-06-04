@@ -18,9 +18,9 @@ function ArriesgarLetra(){
     const palabraTexto = palabra.textContent;
     const letra = inputEntrada.value[0].toUpperCase();
     
-    if(!letra) return; // Evitar procesar entrada vacía
-    
-    if(palabraTexto.includes(letra)){
+    if(letra !== "" || letra !== null){  // Evitar procesar entrada vacía
+
+if(palabraTexto.includes(letra)){
         // Letra correcta: actualizar palabra oculta
         let ocultArray = oculto.split('');
         
@@ -35,6 +35,7 @@ function ArriesgarLetra(){
         
         // Revisar si ganó
         if(!oculto.includes("_")){
+            vidasElem.innerHTML = "¡Felicidades!";
             victoriaElem.innerHTML = "¡Has ganado!";
         }
     } 
@@ -48,6 +49,8 @@ function ArriesgarLetra(){
         if(vidas === 0){
             victoriaElem.innerHTML = "¡Has perdido! La palabra era: " + palabraTexto;
         }
+    }
+
     }
     
     // Limpiar input para siguiente intento
