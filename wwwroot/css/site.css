@@ -1,5 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -8,45 +20,182 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+header {
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid #ffd700;
+  padding: 10px 0;
+  text-align: center;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+header .navbar {
+  background: transparent !important;
+  justify-content: center;
+}
+
+header .navbar-brand {
+  color: #ffd700 !important;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .nav-link {
+  color: #fff !important;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+header .nav-link:hover {
+  color: #ffd700 !important;
+  transform: scale(1.1);
 }
 
 body {
-  margin-bottom: 60px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
-}
-
-main{
-  display: inline-block;
-  margin-left: 5%;
-  margin-right: 5%;
+main {
+  display: block;
   width: 100%;
+  max-width: 600px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-div{
+div {
   width: 100%;
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+
+p {
+  float: none;
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#misterio {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
   display: inline-block;
+  margin: 20px auto;
 }
 
-p{
-  float: left;
-  width: fit-content;
+input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  margin: 10px 5px;
+  width: 150px;
 }
 
-.hidden{
+input:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  border-color: #ffd700;
+}
+
+input:hover {
+  border-color: #ffd700;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #ffd700;
+  border: none;
+  border-radius: 6px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background: #ffed4e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+#intentos {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#victoria {
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 3px solid #ffd700;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffed4e;
+}
+
+.hidden {
   display: none;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
